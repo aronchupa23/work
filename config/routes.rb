@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   get 'todolists' => 'todolists#index'
   get 'todolists/:id' => 'todolists#show', as: 'todolist'
+  #編集機能を追加
+  get 'todolists/:id/edit' => 'todolists#edit', as: 'edit_todolist'
+  #更新データ・updateアクションのルーティング
+  patch 'todolists/:id' => 'todolists#update', as: 'update_todolist'
+
 end
