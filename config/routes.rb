@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'todolists/:id/edit' => 'todolists#edit', as: 'edit_todolist'
   #更新データ・updateアクションのルーティング
   patch 'todolists/:id' => 'todolists#update', as: 'update_todolist'
+  delete 'todolist/:id' => 'todolists#destroy', as:'destroy_todolist'
 
 end
